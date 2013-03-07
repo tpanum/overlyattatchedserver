@@ -80,8 +80,8 @@ unset days
 unset hours
 unset mins
 
-numberOfGreets=$(nl /home/thomas/greetings | tail -n 1 | awk '{print $1}')
+numberOfGreets=$(nl /PATH/TO/greetings | tail -n 1 | awk '{print $1}')
 greetTargetLine=$(($((($RANDOM*$numberOfGreets) / 32767))+1))
-targetGreet=$(awk 'NR=='$greetTargetLine /home/thomas/greetings)
+targetGreet=$(awk 'NR=='$greetTargetLine /PATH/TO/greetings)
 
 echo " *  $targetGreet\n" | sed -e "s/%NAME/$name/" | sed -e "s/%TIME/$time/"
