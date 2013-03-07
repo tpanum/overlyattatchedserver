@@ -1,0 +1,2 @@
+cat /dev/null > ~/.lastlogin
+echo -n $(date) >> ~/.lastlogin
